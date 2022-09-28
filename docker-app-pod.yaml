@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: docker-app-pod
+  label:
+    name: docker-app-pod
+    app: demo-docker-app
+spec:
+  containers:
+    - name: docker-app
+      image: vinusm007/webapplication1:latest
+      ports:
+        - containerPort: 80

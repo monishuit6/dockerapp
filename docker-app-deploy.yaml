@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-app-deploy
+  label:
+    name: docker-app-pod
+    app: demo-docker-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: docker-app-pod
+      app: demo-docker-app
+  template:
+      metadata:
+        name: docker-app-pod
+        label:
+          name: docker-app-pod
+          app: demo-docker-app
+      spec:
+        containers:
+          - name: docker-app
+            image: vinusm007/webapplication1:latest
+            ports:
+              - containerPort: 80
