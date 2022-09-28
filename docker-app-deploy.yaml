@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: docker-app-deploy
-  label:
+  labels:
     name: docker-app-pod
     app: demo-docker-app
 spec:
@@ -14,7 +14,7 @@ spec:
   template:
       metadata:
         name: docker-app-pod
-        label:
+        labels:
           name: docker-app-pod
           app: demo-docker-app
       spec:

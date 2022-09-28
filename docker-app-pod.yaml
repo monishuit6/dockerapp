@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: docker-app-pod
-  label:
+  labels:
     name: docker-app-pod
     app: demo-docker-app
 spec:
