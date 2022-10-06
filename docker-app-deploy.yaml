@@ -20,6 +20,6 @@ spec:
       spec:
         containers:
           - name: docker-app
-            image: vinusm007/webapplication1:latest
+            image: monish1092/audiencepixel:latest
             ports:
               - containerPort: 80
